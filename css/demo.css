@@ -3,7 +3,7 @@
 .demo-2 {
 	font-family: 'Josefin Sans', sans-serif;
 	--color-text: #fff;
-	--color-bg: #9c9c9c;
+	--color-bg: #9ed4d4;
 	--color-link: #8958b1;
 	--color-link-hover: #fff;
 	--color-info: #000;
@@ -18,10 +18,12 @@
 }
 
 .content__subtitle {
-	font-size: 1.45rem;
+	font-size: 1.75rem;
 	padding: 1rem 0;
 	letter-spacing: 2px;
 	text-indent: 2px;
+	width: 100%;
+	text-align: center;
 }
 
 .content__subtitle::after {
@@ -57,13 +59,14 @@
 #content-1 {
 	background-image: url(../img/bg.png);
 	background-blend-mode: multiply;
-	background-color: #ddd;
+	background-color: #6f9bd4;
+	background-position: center;
 }
 
 #content-2 {
-	background-image: url(../img/bg1.jpg);
+	/* background-image: url(../img/bg1.jpg);
 	background-blend-mode: multiply;
-  background-color: rgb(199, 152, 22);
+  background-color: rgb(199, 152, 22); */
 }
 
 #content-3 {
@@ -73,28 +76,21 @@
 }
 
 #content-4 {
-	background-image: url(../img/bg3.jpg);
+	background-image: url(../img/bg-n.jpg);
 	background-blend-mode: multiply;
-  background-color: yellowgreen;
+	background-color: #385a9e;
 }
 
 #content-5 {
-	background-image: url(../img/bg4.jpg);
+	background-image: url(../img/bg1.jpg);
 	background-blend-mode: multiply;
-  background-color: red;
-}
-
-#content-6 {
-	background-image: url(../img/bg5.jpg);
-	background-blend-mode: multiply;
-  background-color: blueviolet;
+	background-color: rgb(78, 11, 146);
 }
 
 .content__text {
-	max-width: 800px;
 	font-size: 1.25rem;
 	line-height: 1.4;
-	text-align: center;
+	/* text-align: center; */
 }
 
 @media screen and (min-width: 55em) {
@@ -222,9 +218,9 @@
 
 	.grim__item-img--1 { color: #fcfdff; background-color: rgb(199, 152, 22); }
 	.grim__item-img--2 { color: #a9bdd6; background-color: aqua; }
-	.grim__item-img--3 { color: #9ed4d4; background-color: yellowgreen; }
+	.grim__item-img--3 {color: #9ed4d4;background-color: #405614;}
 	.grim__item-img--4 { color: #d0bebe; background-color: red; }
-	.grim__item-img--5 { color: #df9e98; background-color: blueviolet; }
+	.grim__item-img--5 {color: #df9e98;background-color: #86bfbf;}
 
 	.grim__item-content {
 		position: relative;
@@ -275,5 +271,36 @@
 		position: relative;
 		display: block;
 		font-size: 1.75rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	#content-3 .content__subtitle{
+		width: 60%;
+	}
+}
+ 
+/* for mobile */
+@media screen and (max-width: 1024px) {
+	#content-5,
+	#content-6,
+	#content-4,
+	#content-2 {
+		display: none;
+	}
+
+	#content-1,
+	#content-3 {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+	}
+
+	#content-1 {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.content__subtitle {
+		font-size: 1rem;
 	}
 }
